@@ -1,0 +1,21 @@
+{% extends 'dashboard.html' %}
+{% block addcss %}
+<!-- <link rel="stylesheet" href="{{url_for('static',filename='addnotes.css')}}"> -->
+{% endblock %}
+{% block content %}
+
+
+<form method="POST">
+    <div class="one">
+        <h1>{{notesdata[3]}}</h1>
+        <!-- <h3>{{title}}Notes</h3> -->
+        <label>Title</label>
+        <input type="text" name="title" placeholder="Enter the title" value="{{notesdata[1]}}" readonly><br>
+        <label>Description</label>
+        <input type="text1" name="desc" placeholder="Enter Description" value="{{notesdata[2]}}"><br><br>
+        <!-- <button class="btn1">Submit</button> -->
+    </div>
+</form>
+
+
+{% endblock content %}

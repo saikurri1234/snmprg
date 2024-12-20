@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 750px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 0.1%;
+        background-color:skyblue;
+    }
+    h1 {
+        background-color:white;
+        color: black;
+        border-style: groove;
+        padding: 10px;
+        /* animation-name: blink;
+        animation-iteration-count: infinite;
+        animation: blink 5s infinite; */
+    }
+
+    /* @keyframes blink {
+        0% {
+            color: blue;
+        }
+
+        10% {
+            color: rgb(11, 210, 144);
+        }
+
+        20% {
+            color: #45a049;
+        }
+
+        30% {
+            color: rgb(213, 22, 86);
+        }
+
+        40% {
+            color: #9ad20c;
+        }
+
+        50% {
+            color: blueviolet;
+        }
+
+        60% {
+            color: rgb(2, 21, 21);
+        }
+
+        80% {
+            color: rgb(205, 24, 205);
+        }
+
+        100% {
+            color: brown;
+        }
+    } */
+
+    button{
+        background-color: #1e0856;
+        text-decoration: none;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 10%;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+        color: aliceblue;
+
+    } 
+    .btn {
+        display: inline-block;
+        padding: 10px;
+        background-color:#160dc8;
+        width: 10%;
+        padding: 1%;
+        
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        /* transition: background-color 0.3s; */
+        /* border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px; */
+    }
+
+    .btn:hover {
+        background-color: blueviolet;
+    }
+
+    a {
+        color:black;
+        text-decoration: none;
+    }
+    
+</style>
+
+<body>
+    <form method="post">
+        <center>
+            <h1>Welcome to Simple Note</h1><br><br>
+            <!-- <a href="{{url_for('create')}}"><button>create</button></a><br><br> -->
+            
+            
+            
+            <a class="btn" href="{{url_for('create')}}">Create</a><br><br>
+            <a class="btn" href="{{url_for('login')}}">Login</a><br><br>
+            
+        </center>
+    </form>
+</body>
+
+</html>

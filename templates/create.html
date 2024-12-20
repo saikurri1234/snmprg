@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+
+    {% for message in messages %}
+       <center><h3>{{message}}</h3></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        /* background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8); */
+        /* background-color: #758376; */
+        color: #333;
+        margin: 0;
+        padding-top: 2%;
+        text-align: center;
+    }
+
+    /* .sec1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .one {
+        width: 50%;
+        padding-left: 5%;
+    }
+
+    .two {
+        width: 50%;
+    } */
+
+    h2 {
+        color: #121512;
+        margin-bottom: 20px;
+        /* animation-name: blink;
+        animation-iteration-count: infinite;
+        animation: blink 3s infinite; */
+    }
+
+    .btn {
+        width: 120px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #a17fe0;
+        border: none;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 800;
+    }
+
+    @keyframes blink {
+        0% {
+            color: blue;
+        }
+
+        10% {
+            color: rgb(11, 210, 144);
+        }
+
+        20% {
+            color: #45a049;
+        }
+
+        30% {
+            color: rgb(213, 22, 86);
+        }
+
+        40% {
+            color: #9ad20c;
+        }
+
+        50% {
+            color: blueviolet;
+        }
+
+        60% {
+            color: rgb(2, 21, 21);
+        }
+
+        80% {
+            color: rgb(205, 24, 205);
+        }
+
+        100% {
+            color: brown;
+        }
+    }
+
+    /* Form Styles */
+    form {
+        margin: 30px auto;
+        padding: 20px;
+        background: lightblue;
+        border-radius: 8px;
+        box-shadow: 5px 2px 10px white;
+        width: 400px;
+        text-align: left;
+    }
+
+    form label {
+        display: block;
+        /* margin: 8px 0 4px; */
+        color: black;
+        font-size: 20px;
+    }
+
+    form input[type="number"],
+    form input[type="text"] {
+        width: 95%;
+        padding: 8px;
+        margin: 8px 0;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+
+    form input[type="submit"] {
+        background-color: rgb(79, 0, 128);
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    form input[type="submit"]:hover {
+        background-color: rgb(96, 12, 222);
+        color: white;
+    }
+</style>
+
+<body>
+    <!-- <section class="sec1"> -->
+        <!-- <div class="one">
+            <img src="https://cdn.dribbble.com/users/277921/screenshots/4223608/gw-dribbble.gif"width="100%">
+        </div>
+        <div class="two"> -->
+
+
+            <h2> Create account</h2>
+
+            <form method="post">
+                
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Username">
+                <label>Email</label>
+                <input type="text" name="email" placeholder="Email">
+                <label>Password</label>
+                <input type="text" name="psd" placeholder="Password">
+                <label>Confirm Password</label>
+                <input type="text" name="cpsd" placeholder="Confirm Password"><br>
+                
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>

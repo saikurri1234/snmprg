@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <!-- <ul class=flashes> -->
+    {% for message in messages %}
+      <!-- <li>{{ message }}</li> -->
+       <center><h3>{{message}}</h3></center>
+    {% endfor %}
+    <!-- </ul> -->
+  {% endif %}
+{% endwith %}
+<body>
+
+    <form method="POST">
+      <center>
+        <input type="text" name="otp"/><br>
+        <button>Submit</button>
+      </center>
+    </form>
+</body>
+</html>
